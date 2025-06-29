@@ -6,11 +6,9 @@ My personal experiments on Embedded Swift on ESP32-C6-DevKitC-1 devboard talking
 
 Connecting with BME680 breakout board.
 
-
 <img src="images/esp32c6-swift-rgb.jpg" width="500">
 
 Using LGB LED
-
 
 ## Initial Setup
 ```bash
