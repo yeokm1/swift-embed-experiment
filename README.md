@@ -14,7 +14,13 @@ Using LGB LED
 ```bash
 # Install Swiftly to managed Swift installation as only snapshot will have
 brew install swiftly
-swiftly install --use main-snapshot
+
+# Use latest snapshot
+swiftly install main-snapshot
+# Version used in repo
+swiftly install main-snapshot-2025-06-22
+
+swiftly use main-snapshot-2025-06-22
 
 # Confirm snapshot is in use
 swiftly list
@@ -25,7 +31,7 @@ mkdir -p ~/esp
 
 # Assume ESP stuff is in this directory.
 cd ~/esp
-git clone -b v5.4.1 --recursive https://github.com/espressif/esp-idf.git
+git clone -b v5.4.2 --recursive https://github.com/espressif/esp-idf.git
 cd ~/esp/esp-idf
 ./install.sh esp32c6
 ```
