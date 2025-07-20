@@ -73,9 +73,10 @@ func wrapper_i2c_write(reg_addr: UInt8, data: UnsafePointer<UInt8>!, len: UInt32
     // LLM guided
     var status: esp_err_t = ESP_FAIL
 
-    withUnsafePointer(to: reg_addr) { reg_addr_temp in
+    var reg_addr_copy: UInt8 = reg_addr
+    withUnsafeMutablePointer(to: &reg_addr_copy) { regAddrMutPtr in
+        
         //Change UnsafePointer to UnsafeMutablePointer. Allocated on stack.
-        let regAddrMutPtr = UnsafeMutablePointer<UInt8>(mutating: reg_addr_temp)
         let dataMutPtr = UnsafeMutablePointer<UInt8>(mutating: data)
 
         let buffer1 = i2c_master_transmit_multi_buffer_info_t(
