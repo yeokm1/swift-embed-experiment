@@ -10,6 +10,10 @@ Connecting with BME680 breakout board.
 
 Using LGB LED
 
+[![](http://img.youtube.com/vi/f4rU6trbTAs/0.jpg)](https://www.youtube.com/watch?v=f4rU6trbTAs)
+
+Video of my talk on this subject.
+
 ## Initial Setup
 ```bash
 # Install Swiftly to managed Swift installation as only snapshot will have
